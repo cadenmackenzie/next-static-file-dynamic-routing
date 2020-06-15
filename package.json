@@ -1,5 +1,5 @@
 {
-  "name": "static-file-dynamic-rendering",
+  "name": "static-file-dynamic-routing",
   "version": "0.1.0",
   "private": true,
   "scripts": {
