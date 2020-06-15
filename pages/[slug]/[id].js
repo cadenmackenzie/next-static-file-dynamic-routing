@@ -1,9 +1,4 @@
-import { useRouter } from "next/router";
-
-export default function DynamicRoute() {
-  const router = useRouter();
-  const { slug, id } = router.query;
-
+function DynamicRoute({ slug, id }) {
   return (
     <>
       <h1>
@@ -18,3 +13,10 @@ export default function DynamicRoute() {
     </>
   );
 }
+
+DynamicRoute.getInitialProps = async (ctx) => {
+  const { slug, id } = ctx.query;
+  return { slug, id };
+};
+
+export default DynamicRoute;
